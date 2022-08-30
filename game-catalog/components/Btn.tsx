@@ -1,13 +1,15 @@
-import { Button, createStyles  } from '@mantine/core';
+import { Button, createStyles } from '@mantine/core';
+import { BsSearch } from "react-icons/bs";
 
 const useStyles = createStyles((theme) => ({
   root: {
-    height: 50,
+    height: 40,
     width: 90,
+    margin: 5,
 
     '&:hover': {
-      backgroundColor: theme.colors.violet[6],
-      color: theme.colors.red[2],
+      backgroundColor: theme.colors.gray[6],
+      color: theme.colors.gray[9],
     }
   }
 }))
@@ -16,8 +18,8 @@ export default function Btn() {
   const {classes} = useStyles()
 
   return (
-    <Button variant='light'color='green.5' radius='md' classNames={{root: classes.root}}>
-      Settings
+    <Button variant='outline'color='gray.1' radius='md' classNames={{root: classes.root}}>
+      <BsSearch />
     </Button>
   );
 }
